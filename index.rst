@@ -1,27 +1,36 @@
 为什么软件项目从集中式迁移到分布式版本控制系统的热情持续不减?
 ===================================================================
 
-译者 (yospaly) 前言:
+:翻译:
+    .. line-block::
+
+        `brantyoung <http://yangyubo.com>`_
+
+:项目主页:
+    - `Why Are Software Projects Moving From Centralized to Decentralized Version Control Systems? <http://www.cs.usask.ca/~bsd178/>`_
+    - `为什么软件项目从集中式迁移到分布式版本控制系统的热情持续不减? - 中文版 <https://github.com/brantyoung/zh-why-projects-moving-to-dvcs>`_
+
+译者前言:
   .. line-block::
-    
+
     DVCS (分布式版本控制系统) 开始逐渐为开发者所接受, 很多开源项目对 DVCS 也是趋之若鹜. 相对于传统的 CVCS (集中式版本控制系统), DVCS 到底能够给软件开发带来哪些好处? 这么多大型开源项目迁移到 DVCS 到底是出于什么目的? 最重要的原因肯定不是赶时髦 :)
-    
+
     两位来自加拿大萨省大学计算机科学院下属研究机构的研究员着手对这个现象进行一番深入探究, <<为什么迁移到 DVCS>> 是他们的初步研究成果, 主要研究对象是 4 个大型开源项目. 尽管是初步报告, <<为什么迁移到 DVCS>> 仍然有利于认识和理解 DVCS 流行现象.
-    
+
     十分期待他们的后续研究成果, 尤其是商业公司切换到 DVCS 的部分, 对该系列后续论文的翻译我将尽力跟进.
-    
+
     译文由强大的 reStructuredText_ 文本标记语法驱动.
 
 
 英文版原作者:
   .. line-block::
-    
+
     Brian de Alwis
     Dept of Computer Science
     University of Saskatchewan
     Saskatoon, SK, Canada
     brian.de.alwis@usask.ca
-    
+
     Jonathan Sillito
     Dept of Computer Science
     University of Calgary
@@ -114,7 +123,7 @@ NetBSD:
 
 方便所有开发人员的访问:
     大多数项目向 DVCS 迁移的关键原因之一是: 对非提交者更友好. 没有提交权限的贡献者在开发时很难从 CVCS 中受益, 常常需要采用创建并行库的方式来管理较大的代码变更. 在 Python 的讨论中, 这个问题被特别强调, 因为 CVCS 最大的局限就是 "任何为 Python 写补丁或对其进行定制的开发人员, 版本修订时得不到工具的直接支持". Perl 基金会强调 DVCS 必须是开源的, 以确保社区所有成员都可以使用该工具. OpenOffice 开发过程主要依赖 CVS 分支, 开发人员必须要有该库的写权限.
-    
+
     在 DVCS 中, 每个贡献者有他们自己的库, 而且他们能够 "随时保存他们的工作进度, 让开发过程更轻松". Torvalds (GIT 之父) 认为分布式系统的特性避免了项目围绕着获取 (和回收) 向中央库提交代码权限的政治纷争 [10]_ (译注: 关于 Torvalds 政治纷争的观点详细解释可 `进一步阅读 <http://people.debian.org.tw/~chihchun/2008/12/19/linus-torvalds-on-git/>`_). 当贡献者正在进行重大修改, 或评审过程需要贡献者反复修改提交的代码时, 这个特点显得尤为重要.
 
 支持原子变更:
